@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+  transform: scale(1.1);
+}
+
+/* result input */
+.password-container {
+  position: relative;
+  margin-top: 25px;
+}
+
+.password-container input[type="text"],
+.password-container input[type="text"]:focus {
+  width: 100%;
+  padding: 14px 90px 14px 16px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  color: #1b1b1b;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.password-container input[type="text"]::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.password-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007acc;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.password-container button:hover {
+  background-color: #005f99;
+}
+
+#copyButton {
+  right: 50px;
+}
+
+#generateButton {
+  right: 6px;
+}
+
+#copyStatus {
+  font-size: 14px;
+  text-align: center;
+  color: #28a745;
+  height: 1em;
+  margin-bottom: 20px;
+}
+
+/* form */
+form {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #007acc;
+  padding: 6px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -6px;
+  left: 1px;
+  color: #007acc;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* range */
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #007acc, #00c4cc);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007acc;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007acc;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* length span */
+#passwdLength {
+  font-weight: bold;
+  color: #007acc;
+  margin-left: 5px;
+}

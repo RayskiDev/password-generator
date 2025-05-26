@@ -1,3 +1,4 @@
+// initial setup
 const passwdOutput = document.getElementById("generatedPassword");
 const slider = document.getElementById("length");
 const passwdLength = document.getElementById("passwdLength");
@@ -12,6 +13,8 @@ const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberChars = "0123456789";
 const symbolChars = "!@#$%^&*()_+-=[]{}|;:'\",.<>?/";
 
+
+// generate password function
 function generatePasswd() {
   let passwd = "";
   let allChars = "";
@@ -34,6 +37,8 @@ function generatePasswd() {
   passwdOutput.value = passwd;
 }
 
+
+// copy password to clipboard
 function copyPasswd() {
   let passwd = passwdOutput.value;
   if (passwd.trim() === "") return;
@@ -46,7 +51,9 @@ function copyPasswd() {
   });
 }
 
-inputCheckbox.forEach((check) => {
+
+// checkbox change event
+inputCheckbox.forEach(check => {
   check.addEventListener("change", () => {
     let checkedCount = Array.from(inputCheckbox).filter((cb) => cb.checked).length;
     if (checkedCount === 0) {
@@ -57,6 +64,8 @@ inputCheckbox.forEach((check) => {
   });
 });
 
+
+// slider change event
 slider.addEventListener("input", () => {
   passwdLength.textContent = slider.value;
   generatePasswd();

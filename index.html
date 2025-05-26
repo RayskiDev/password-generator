@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator haseł</title>
+    <meta name="description" content="Prosty generator losowych haseł. Wybierz długość, rodzaj znaków i wygeneruj bezpieczne hasło.">
+
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="passwd.ico">
-    <script src="https://kit.fontawesome.com/dd27f562fc.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dd27f562fc.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
-    <header>
+    <main class="container">
         <h1>Generator Losowych Haseł</h1>
-    </header>
-    <div class="container">
         <form id="passwordForm">
             <div class="password-container">
                 <input type="text" id="generatedPassword" placeholder="Wygenerowane hasło..." readonly>
@@ -47,9 +47,9 @@
                 Znaki specjalne
             </label>
         </form>
-    </div>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
