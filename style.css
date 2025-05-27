@@ -17,7 +17,7 @@ body {
 
 .container {
   width: 500px;
-  margin: 40px auto;
+  margin: auto;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -53,6 +53,10 @@ body {
   font-style: italic;
 }
 
+.function-button-container {
+  display: inline;
+}
+
 .password-container button {
   position: absolute;
   top: 50%;
@@ -79,8 +83,15 @@ body {
   right: 6px;
 }
 
+.mobile-text {
+  display: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
 #copyStatus {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: #28a745;
   height: 1em;
@@ -90,6 +101,7 @@ body {
 /* form */
 form {
   text-align: left;
+  margin-bottom: 20px;
 }
 
 form label {
@@ -161,4 +173,41 @@ input[type="range"]::-moz-range-thumb {
   font-weight: bold;
   color: #007acc;
   margin-left: 5px;
+}
+
+/* responsiveness */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: auto;
+    padding: 15px 25px;
+    transform: scale(1);
+  }
+
+  .password-container input[type="text"] {
+    padding-right: 16px;
+  }
+
+  .function-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px auto 0;
+  }
+
+  #copyButton,
+  #generateButton {
+    position: static;
+    transform: translateY(0);
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+
+  #copyStatus {
+    font-size: 20px;
+    margin: 10px auto 0;
+    height: 1.5em;
+  }
 }

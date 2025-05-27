@@ -2,13 +2,14 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator haseł</title>
-    <meta name="description" content="Prosty generator losowych haseł. Wybierz długość, rodzaj znaków i wygeneruj bezpieczne hasło.">
+    <meta name="description"
+        content="Prosty generator losowych haseł. Wybierz długość, rodzaj znaków i wygeneruj bezpieczne hasło." />
 
-    <link rel="preconnect" href="https://ka-f.fontawesome.com">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/dd27f562fc.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -17,33 +18,38 @@
         <h1>Generator Losowych Haseł</h1>
         <form id="passwordForm">
             <section class="password-container">
-                <input type="text" id="generatedPassword" placeholder="Wygenerowane hasło..." readonly>
-                <button type="button" title="Kopiuj hasło" id="copyButton" onclick="copyPasswd()"><i class="fa-regular fa-copy"></i></button>
-                <button type="button" title="Generuj nowe hasło" id="generateButton" onclick="generatePasswd()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                <input type="text" id="generatedPassword" placeholder="Wygenerowane hasło..." readonly />
+                
+                <div class="function-button-container">
+                    <button type="button" title="Kopiuj hasło" id="copyButton" onclick="copyPasswd()">
+                        <i class="fa-regular fa-copy"></i><span class="mobile-text">Skopiuj hasło</span>
+                    </button>
+                    <button type="button" title="Generuj nowe hasło" id="generateButton" onclick="generatePasswd()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i><span class="mobile-text">Generuj nowe</span>
+                    </button>
             </section>
             <p id="copyStatus" aria-live="polite"></p>
 
-
             <label for="length">Długość hasła: <span id="passwdLength">12</span></label>
-            <input type="range" id="length" min="4" max="64" value="12" required>
+            <input type="range" id="length" min="4" max="64" value="12" required />
 
             <label for="includeUppercase">
-                <input type="checkbox" id="includeUppercase" checked>
+                <input type="checkbox" id="includeUppercase" checked />
                 Duże litery
             </label>
 
             <label for="includeLowercase">
-                <input type="checkbox" id="includeLowercase" checked>
+                <input type="checkbox" id="includeLowercase" checked />
                 Małe litery
             </label>
 
             <label for="includeNumbers">
-                <input type="checkbox" id="includeNumbers">
+                <input type="checkbox" id="includeNumbers" />
                 Cyfry
             </label>
 
             <label for="includeSpecial">
-                <input type="checkbox" id="includeSpecial">
+                <input type="checkbox" id="includeSpecial" />
                 Znaki specjalne
             </label>
         </form>
