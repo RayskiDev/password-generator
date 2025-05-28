@@ -6,7 +6,7 @@ const includeUppercase = document.getElementById("includeUppercase");
 const includeLowercase = document.getElementById("includeLowercase");
 const includeNumbers = document.getElementById("includeNumbers");
 const includeSpecial = document.getElementById("includeSpecial");
-const inputCheckbox = document.querySelectorAll('input[type="checkbox"]');
+const inputCheckbox = [includeUppercase, includeLowercase, includeNumbers, includeSpecial];
 
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
