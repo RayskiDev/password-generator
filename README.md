@@ -1,6 +1,6 @@
 # Generator haseł
 
-Generator haseł, który pomaga szybko stworzyć mocne, unikalne hasło. Użytkownik może dostosować długość hasła i zdecydować, jakie znaki mają zostać uwzględnione.
+Generator haseł, który pomaga szybko stworzyć mocne, unikalne hasło. Użytkownik może dostosować długość hasła i zdecydować, jakie znaki mają zostać uwzględnione. Projekt stworzony w celu ćwiczenia pracy oraz pokazania umiejętności z językiem JavaScript.
 
 ## Jak to działa?
 
